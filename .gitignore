@@ -1,0 +1,19 @@
+# Node
+node_modules/
+.npm
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.suo
+*.user
+
+# Scratch/utility scripts
+replace_links.py
+update_whatsapp.js
+
+# Vercel local
+.vercel

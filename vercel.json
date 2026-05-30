@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "*.html", "use": "@vercel/static" },
+    { "src": "*.png", "use": "@vercel/static" },
+    { "src": "*.jpg", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/code.html" },
+    { "src": "/home", "dest": "/code.html" },
+    { "src": "/coworking", "dest": "/code.coworking space page.html" },
+    { "src": "/study-library", "dest": "/code_Study lib.html" },
+    { "src": "/virtual-office", "dest": "/code.virtual office.html" },
+    { "src": "/reviews", "dest": "/code.reviews page.html" },
+    { "src": "/contact", "dest": "/Contact us page_code.html" }
+  ]
+}

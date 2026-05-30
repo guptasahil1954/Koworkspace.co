@@ -1,0 +1,465 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Reviews - Koworkspace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#dcdad1",
+                        "primary-fixed": "#d6e4f9",
+                        "on-secondary-container": "#636262",
+                        "on-background": "#1c1c17",
+                        "primary": "#000000",
+                        "surface-bright": "#fcf9f0",
+                        "surface-container-high": "#ebe8df",
+                        "outline-variant": "#c4c6cc",
+                        "outline": "#74777d",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#31312b",
+                        "on-tertiary-fixed": "#002201",
+                        "on-surface": "#1c1c17",
+                        "on-surface-variant": "#44474c",
+                        "inverse-primary": "#bac8dc",
+                        "on-primary-fixed-variant": "#3a4859",
+                        "surface-container-highest": "#e5e2da",
+                        "secondary": "#5f5e5e",
+                        "inverse-on-surface": "#f3f1e8",
+                        "on-tertiary-container": "#609056",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f6f3eb",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-tint": "#525f71",
+                        "tertiary-fixed": "#bcf0ae",
+                        "surface-container": "#f1eee5",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#bac8dc",
+                        "background": "#fcf9f0",
+                        "tertiary-container": "#002201",
+                        "on-tertiary-fixed-variant": "#23501e",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "primary-container": "#0f1c2c",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-primary-fixed": "#0f1c2c",
+                        "surface-variant": "#e5e2da",
+                        "on-primary-container": "#778598",
+                        "secondary-container": "#e2dfde",
+                        "tertiary-fixed-dim": "#a1d494",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#474746",
+                        "tertiary": "#000000",
+                        "surface": "#fcf9f0",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "sm": "0.125rem",
+                        "md": "0.375rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "xs": "4px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "lg": "48px",
+                        "xl": "80px",
+                        "container-max": "1280px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Hanken Grotesk"],
+                        "display": ["Hanken Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "label-caps": ["Inter"],
+                        "display-lg-mobile": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "headline-sm": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "display-lg-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "headline-md": ["32px", { lineHeight: "40px", fontWeight: "600" }],
+                        "headline-sm": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+                        "label-caps": ["12px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body antialiased">
+<!-- JSON Anchor: TopAppBar -->
+<header class="bg-surface/90 backdrop-blur-md dark:bg-surface-container/90 fixed top-0 w-full z-50 shadow-sm border-b border-outline-variant/30">
+    <div class="flex justify-between items-center w-full px-8 py-4 max-w-container-max mx-auto">
+        <div class="flex items-center gap-md">
+            <a class="text-[24px] leading-[32px] font-headline font-bold text-primary dark:text-inverse-primary" href="code.html">Koworkspace</a>
+        </div>
+        <div class="flex items-center gap-lg">
+            <nav class="hidden md:flex items-center gap-lg font-body-md text-body-md">
+                <a class="text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="code.html">Home</a>
+                <a class="text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="code.virtual%20office.html">Virtual Office</a>
+                <a class="text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="code.coworking%20space%20page.html">Coworking Space</a>
+                <a class="text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="code_Study%20lib.html">Study Library</a>
+                <a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary pb-1 hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="code.reviews%20page.html">Reviews</a>
+                <a class="text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="Contact%20us%20page_code.html">Contact</a>
+            </nav>
+            <!-- Mobile Menu Trigger -->
+            <div class="md:hidden flex items-center">
+                <span class="material-symbols-outlined text-on-surface">menu</span>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="pt-[90px]">
+<!-- Hero Section -->
+<section class="relative max-w-container-max mx-auto px-gutter pt-md pb-xl md:pt-lg md:pb-[120px] overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-xl items-start">
+<!-- Hero Content -->
+<div class="lg:col-span-6 flex flex-col gap-md z-10">
+<div class="inline-flex items-center gap-sm bg-tertiary-fixed/30 text-on-tertiary-container font-label-caps text-label-caps px-sm py-xs rounded-full self-start">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                    <span class="">Trusted by Professionals in Delhi</span>
+                </div>
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface">
+                    Reviews from Our Coworking Community
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                    See what students, freelancers, startups, consultants, and business owners say about their experience at Koworkspace, Sector 7 Dwarka.
+                </p>
+<div class="flex flex-col sm:flex-row gap-sm pt-sm">
+<a href="Contact us page_code.html" target="_blank" class="inline-flex items-center justify-center bg-primary text-on-primary px-8 py-3.5 rounded-lg font-semibold hover:bg-primary/90 transition-colors shadow-sm">
+                        Enquire Now
+                    </a>
+</div>
+</div>
+<!-- Hero Imagery -->
+<div class="lg:col-span-6 relative h-[500px] lg:h-[600px] rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(26,26,26,0.05)] border border-outline-variant/20 w-full">
+<img alt="Our community reviews" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-fJpbjx2czE85irPsO-f1m7HbtKeq-umztT8rgHXJUyitFTi-K83kMWd5bK1uo_n8K61bD_jFilp-XoC5f5KvDJjU_GigzkgAS8O-nz5Xu5S77LRfUlHscW7Wh3q66Rmv2Px5Llbq1A5ipLBS5j3szxhM7yMMu2-OikwmCTe614dBbOYoEr0_1swtc-8FasZXaMUx0VktU7CdWTaDtgav_XyqhL88KkctpZ4il2tuwoMNgOrPXUsgTgu2JNxWDSFcx3t5hMlgccRZ"/>
+</div>
+</div>
+</section>
+<!-- Intro Section -->
+<section class="py-lg border-t border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="max-w-3xl mb-12">
+<h2 class="text-headline-md font-headline text-primary mb-4">Why People Choose Koworkspace</h2>
+<p class="text-body-md text-on-surface-variant">
+                    Koworkspace is designed for people who need an affordable, peaceful, and professional workspace in Dwarka. Whether you are a solo entrepreneur, a growing team, or a student preparing for exams, our space adapts to your needs with essential amenities and a distraction-free environment.
+                </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="p-6 bg-surface-container-lowest rounded-lg border border-outline-variant/20 shadow-[0_4px_12px_rgba(26,26,26,0.05)]">
+<div class="text-headline-md font-headline text-primary mb-1 flex items-center">
+                        4.7<span class="material-symbols-outlined text-on-tertiary-container ml-1" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<div class="text-label-caps text-on-surface-variant uppercase tracking-wider">Google Rating</div>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-lg border border-outline-variant/20 shadow-[0_4px_12px_rgba(26,26,26,0.05)]">
+<div class="text-headline-md font-headline text-primary mb-1 flex items-center">
+                        4.83<span class="material-symbols-outlined text-on-tertiary-container ml-1" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<div class="text-label-caps text-on-surface-variant uppercase tracking-wider">Coworker.com</div>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-lg border border-outline-variant/20 shadow-[0_4px_12px_rgba(26,26,26,0.05)]">
+<div class="text-headline-md font-headline text-primary mb-1">Sector 7</div>
+<div class="text-label-caps text-on-surface-variant uppercase tracking-wider">Dwarka Location</div>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-lg border border-outline-variant/20 shadow-[0_4px_12px_rgba(26,26,26,0.05)]">
+<div class="text-headline-md font-headline text-primary mb-1">₹250</div>
+<div class="text-label-caps text-on-surface-variant uppercase tracking-wider">Starting per day</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews Grid -->
+<section class="py-xl">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16">
+<h2 class="text-headline-md font-headline text-primary mb-4">What Our Members Say</h2>
+<p class="text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                    Real experiences from people who work, study, and grow at Koworkspace.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Review 1 -->
+<div class="p-8 bg-surface-container-lowest rounded-lg border border-outline-variant/20 shadow-[0_4px_12px_rgba(26,26,26,0.05)] flex flex-col h-full relative overflow-hidden group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+<div class="absolute top-0 left-0 w-full h-[4px] bg-on-tertiary-container opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex text-on-tertiary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<p class="text-body-md text-on-surface mb-6 flex-grow italic">
+                        "Great coworking office space. I and my team have been working here for 2 months now. High-speed internet, free tea/coffee, and professional environment."
+                    </p>
+<div class="flex items-center justify-between border-t border-outline-variant/20 pt-4 mt-auto">
+<div>
+<div class="font-headline font-semibold text-primary">Saksham Goel</div>
+<div class="text-label-caps text-on-surface-variant">Team Member</div>
+</div>
+<span class="text-xs bg-surface-container px-2 py-1 rounded text-on-surface-variant border border-outline-variant/30">Google Review</span>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="p-8 bg-surface-container-lowest rounded-lg border border-outline-variant/20 shadow-[0_4px_12px_rgba(26,26,26,0.05)] flex flex-col h-full relative overflow-hidden group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+<div class="absolute top-0 left-0 w-full h-[4px] bg-on-tertiary-container opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex text-on-tertiary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<p class="text-body-md text-on-surface mb-6 flex-grow italic">
+                        "Love to work or even read sometimes here. The place is very calm. Best part is it is open on Sundays also. Very supportive staff."
+                    </p>
+<div class="flex items-center justify-between border-t border-outline-variant/20 pt-4 mt-auto">
+<div>
+<div class="font-headline font-semibold text-primary">Ananya Sharma</div>
+<div class="text-label-caps text-on-surface-variant">Freelancer</div>
+</div>
+<span class="text-xs bg-surface-container px-2 py-1 rounded text-on-surface-variant border border-outline-variant/30">Google Review</span>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="p-8 bg-surface-container-lowest rounded-lg border border-outline-variant/20 shadow-[0_4px_12px_rgba(26,26,26,0.05)] flex flex-col h-full relative overflow-hidden group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+<div class="absolute top-0 left-0 w-full h-[4px] bg-on-tertiary-container opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex text-on-tertiary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<p class="text-body-md text-on-surface mb-6 flex-grow italic">
+                        "Love the simplicity of this place. Great service with all facilities. Very clean and hygienic space to work. Highly recommended for freelancers."
+                    </p>
+<div class="flex items-center justify-between border-t border-outline-variant/20 pt-4 mt-auto">
+<div>
+<div class="font-headline font-semibold text-primary">Varun Khanna</div>
+<div class="text-label-caps text-on-surface-variant">Freelancer &amp; Team</div>
+</div>
+<span class="text-xs bg-surface-container px-2 py-1 rounded text-on-surface-variant border border-outline-variant/30">Google Review</span>
+</div>
+</div>
+<!-- Review 4 -->
+<div class="p-8 bg-surface-container-lowest rounded-lg border border-outline-variant/20 shadow-[0_4px_12px_rgba(26,26,26,0.05)] flex flex-col h-full relative overflow-hidden group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+<div class="absolute top-0 left-0 w-full h-[4px] bg-on-tertiary-container opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex text-on-tertiary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<p class="text-body-md text-on-surface mb-6 flex-grow italic">
+                        "Nice coworking space in Dwarka with affordable pricing. Initially went for meetings, ended up taking a monthly dedicated desk."
+                    </p>
+<div class="flex items-center justify-between border-t border-outline-variant/20 pt-4 mt-auto">
+<div>
+<div class="font-headline font-semibold text-primary">Deepika Arora</div>
+<div class="text-label-caps text-on-surface-variant">Startup Founder</div>
+</div>
+<span class="text-xs bg-surface-container px-2 py-1 rounded text-on-surface-variant border border-outline-variant/30">Google Review</span>
+</div>
+</div>
+<!-- Review 5 -->
+<div class="p-8 bg-surface-container-lowest rounded-lg border border-outline-variant/20 shadow-[0_4px_12px_rgba(26,26,26,0.05)] flex flex-col h-full relative overflow-hidden group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+<div class="absolute top-0 left-0 w-full h-[4px] bg-on-tertiary-container opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex text-on-tertiary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<p class="text-body-md text-on-surface mb-6 flex-grow italic">
+                        "Best place to work according to me. The most affordable coworking space in Dwarka right now with zero hidden charges."
+                    </p>
+<div class="flex items-center justify-between border-t border-outline-variant/20 pt-4 mt-auto">
+<div>
+<div class="font-headline font-semibold text-primary">Rohit Nair</div>
+<div class="text-label-caps text-on-surface-variant">Professional</div>
+</div>
+<span class="text-xs bg-surface-container px-2 py-1 rounded text-on-surface-variant border border-outline-variant/30">Google Review</span>
+</div>
+</div>
+<!-- Review 6 -->
+<div class="p-8 bg-surface-container-lowest rounded-lg border border-outline-variant/20 shadow-[0_4px_12px_rgba(26,26,26,0.05)] flex flex-col h-full relative overflow-hidden group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+<div class="absolute top-0 left-0 w-full h-[4px] bg-on-tertiary-container opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex text-on-tertiary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<p class="text-body-md text-on-surface mb-6 flex-grow italic">
+                        "Love this place! Good for startups and freelancers with all the amenities. The location is very accessible."
+                    </p>
+<div class="flex items-center justify-between border-t border-outline-variant/20 pt-4 mt-auto">
+<div>
+<div class="font-headline font-semibold text-primary">Shalini Gupta</div>
+<div class="text-label-caps text-on-surface-variant">Startup Founder</div>
+</div>
+<span class="text-xs bg-surface-container px-2 py-1 rounded text-on-surface-variant border border-outline-variant/30">Coworker.com</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Highlights Section -->
+<div class="max-w-container-max mx-auto px-gutter my-12">
+<section class="py-xl bg-surface-container-low rounded-xl px-8 md:px-16 border border-outline-variant/20">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+<h3 class="text-headline-md font-headline text-primary mb-6">What Members Appreciate Most</h3>
+<ul class="space-y-4">
+<li class="flex items-center text-body-md text-on-surface">
+<span class="material-symbols-outlined text-on-tertiary-container mr-3">check_circle</span>
+                            Peaceful, distraction-free environment
+                        </li>
+<li class="flex items-center text-body-md text-on-surface">
+<span class="material-symbols-outlined text-on-tertiary-container mr-3">check_circle</span>
+                            Affordable, transparent pricing plans
+                        </li>
+<li class="flex items-center text-body-md text-on-surface">
+<span class="material-symbols-outlined text-on-tertiary-container mr-3">check_circle</span>
+                            Prime Sector 7 Dwarka location
+                        </li>
+<li class="flex items-center text-body-md text-on-surface">
+<span class="material-symbols-outlined text-on-tertiary-container mr-3">check_circle</span>
+                            Reliable High-speed WiFi
+                        </li>
+<li class="flex items-center text-body-md text-on-surface">
+<span class="material-symbols-outlined text-on-tertiary-container mr-3">check_circle</span>
+                            Friendly, supportive staff
+                        </li>
+<li class="flex items-center text-body-md text-on-surface">
+<span class="material-symbols-outlined text-on-tertiary-container mr-3">check_circle</span>
+                            Complimentary tea &amp; coffee
+                        </li>
+<li class="flex items-center text-body-md text-on-surface">
+<span class="material-symbols-outlined text-on-tertiary-container mr-3">check_circle</span>
+                            Multi-purpose spaces for varied needs
+                        </li>
+</ul>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-[0_4px_12px_rgba(26,26,26,0.05)] border border-outline-variant/20 text-center group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+<div class="text-label-caps text-on-surface-variant mb-2">Overall Rating</div>
+<div class="text-display-lg font-headline text-primary mb-2">4.7<span class="text-headline-md text-on-surface-variant">/5</span></div>
+<div class="flex justify-center text-on-tertiary-container mb-6">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: &quot;FILL&quot; 1;">star_half</span>
+</div>
+<div class="flex justify-center gap-4 mb-8 text-sm text-on-surface-variant">
+<span class="">Google</span> • <span class="">Justdial</span> • <span class="">Coworker.com</span>
+</div>
+<a href="Contact us page_code.html" target="_blank" class="w-full py-3 bg-on-tertiary-container text-on-tertiary font-label rounded hover:bg-tertiary-container transition-colors shadow-sm inline-block text-center">
+                        Enquire Now
+                    </a>
+</div>
+</div>
+</section>
+</div>
+<!-- CTA Section -->
+<section class="py-xl text-center max-w-3xl mx-auto px-gutter">
+<h2 class="text-headline-md font-headline text-primary mb-4">Ready to Experience Koworkspace?</h2>
+<p class="text-body-md text-on-surface-variant mb-8">
+                Visit Koworkspace in Sector 7 Dwarka and choose a plan that fits your work style. Whether you need a hot desk for a day or a dedicated setup for a month, we have you covered. Starting at just ₹250/day.
+            </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<a href="Contact us page_code.html" target="_blank" class="px-8 py-3 bg-primary text-on-primary font-label rounded hover:bg-on-surface transition-colors shadow-sm inline-block text-center">
+                    Enquire Now
+                </a>
+
+</div>
+</section>
+</main>
+<!-- JSON Anchor: Footer -->
+<footer class="bg-surface-container-high w-full pt-20 pb-10 border-t border-outline-variant">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 px-8 max-w-[1280px] mx-auto">
+            <!-- Brand & Copyright -->
+            <div class="col-span-1 flex flex-col gap-3 md:col-span-6">
+                <div class="text-[24px] leading-[32px] font-headline font-bold text-on-surface">Koworkspace</div>
+                <p class="text-[14px] leading-[20px] text-on-surface-variant max-w-sm">
+                    © 2024 Koworkspace Dwarka. All rights reserved. Professional Coworking &amp; Virtual Offices.
+                </p>
+                <div class="flex gap-4"><a aria-label="Facebook" class="w-10 h-10 rounded bg-[#1a1a1a]/5 flex items-center justify-center text-[#1a1a1a] hover:bg-[#1a1a1a]/10 hover:text-primary transition-colors" href="https://www.facebook.com/koworkspace" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/facebook/000000" alt="Facebook" class="w-5 h-5"></a><a aria-label="Instagram" class="w-10 h-10 rounded bg-[#1a1a1a]/5 flex items-center justify-center text-[#1a1a1a] hover:bg-[#1a1a1a]/10 hover:text-primary transition-colors" href="https://www.instagram.com/ko_workspace/" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/instagram/000000" alt="Instagram" class="w-5 h-5"></a><a aria-label="LinkedIn" class="w-10 h-10 rounded bg-[#1a1a1a]/5 flex items-center justify-center text-[#1a1a1a] hover:bg-[#1a1a1a]/10 hover:text-primary transition-colors" href="https://www.linkedin.com/company/koworkspace/about/" target="_blank" rel="noopener noreferrer"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkPmG25fKJSAB8z-5zunXjwFfF9D7636bcYthKX3-Mdo0hCi-w9Br5tLAtkVQ_Tom8-j4-QUk8aqkAF1b6sCLwlsw1vTO88UGOxwjg9gLXfwDDpK9q1djGJFsuGg_TQZWjwSMdDBmK689Z5ySDykBncUA2fstogAAIcpdONJZoNRxQpZPERUj130x_wOK3AfoG9LsWg-KKZNpOm4HVjiYci_5KH_uHui545IpAYLY-9ZW-YUGUIjAV2dWkM2C9-Rgx-EfIwYOhLraV" alt="LinkedIn" class="w-5 h-5"></a></div>
+            </div>
+            <!-- Contact Us -->
+            <div class="col-span-1 flex flex-col gap-3 md:col-span-6">
+                <span class="text-[12px] leading-[16px] font-label font-semibold text-on-surface uppercase tracking-wider">Contact Us</span>
+                <div class="flex flex-col gap-1">
+                    <p class="text-[14px] leading-[20px] text-secondary flex gap-1">
+                        <span class="material-symbols-outlined text-[18px]">location_on</span>
+                        <span class="">First floor, D-1/38, Palam Ext, behind RBL Bank, Block D, Sector 7 Dwarka, Palam, New Delhi, Delhi, 110075</span>
+                    </p>
+                    <a class="text-[14px] leading-[20px] text-secondary hover:text-on-surface transition-colors flex items-center gap-1" href="tel:+919891051905">
+                        <span class="material-symbols-outlined text-[18px]">call</span>
+                        +91 9891051905, +91 8010302634</a>
+                    <a class="text-[14px] leading-[20px] text-secondary hover:text-on-surface transition-colors flex items-center gap-1" href="mailto:koworkspace@gmail.com">
+                        <span class="material-symbols-outlined text-[18px]">mail</span>
+                        koworkspace@gmail.com
+                    </a>
+                    <p class="text-[14px] leading-[20px] text-secondary flex items-start gap-1 mt-1">
+                        <span class="material-symbols-outlined text-[18px]">schedule</span>
+                        <span class="">Mon - Sat: 9:30 AM – 7:00 PM<br/>Sun: Closed</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- Floating WhatsApp Button -->
+    <a aria-label="Contact on WhatsApp"
+        class="fixed bottom-8 right-8 z-50 hover:scale-110 transition-transform active:scale-95 overflow-hidden rounded-full bg-transparent"
+        href="https://wa.me/919891051905?text=Hi%2C%20I%20want%20to%20enquire%20about%20Koworkspace%20plans" target="_blank">
+        <img alt="WhatsApp" class="object-contain w-14 h-14 rounded-full"
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" />
+    </a>
+
+
+
+</body></html>
